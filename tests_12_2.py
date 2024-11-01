@@ -52,7 +52,8 @@ class TournamentTest(unittest.TestCase):
         self.obj2 = Runner('Андрей', 9)
         self.obj3 = Runner('Ник', 3)
 
-    def tearDownClass(self):
+    @classmethod
+    def tearDownClass(cls):
         for k, v in cls.all_results.items():
             print(f'{k}: {v}')
 
